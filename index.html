@@ -1,137 +1,443 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap icon-set -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-    <!-- Bootstrap css -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" 
-    rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;1,100;1,300&family=Seymour+One&display=swap" 
-    rel="stylesheet">
-    <!-- custom css -->
-    <link rel="stylesheet" href="style.css">
-    <title>Fashioncode</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- BOOTSTRAP -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400&display=swap" rel="stylesheet">
+  <!-- CUSTOM STYLESHEET -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>fashioncode</title>
 </head>
+
 <body>
-    <!-- nav section -->
-    
-      <header class="  container-fluid px-0 bg-dark">
-        <div class="navbar-container position-relative"> 
-    <!-- top-Navbar -->
-    <nav class=" bg-tranparent navbar  d-none d-md-block p-0">
-        <div class="container-fluid "> 
-              <ul class="nav">
-                  <li class="nav-item text-light">
-                      <i class='bi bi-clock'></i>
-                      Mon - Sat: 8.00 am - 5.00 pm
-                  </li>
-                  <li class="nav-item text-light">
-                      &nbsp; Sun:  Closed
-                  </li>
-              </ul>
-          
-         <div class='social'>
-             <ul class="nav">
-                <li class="nav-item me-4">
-                    <i class="bi bi-facebook"></i>
-                </li>
-                <li class="nav-item me-4">
-                    <i class="bi bi-twitter"></i>
-                </li>
-                <li class="nav-item me-4">
-                    <i class="bi bi-linkedin"></i>
-                </li>
-             </ul>
-         </div>
-        </div>
-      </nav> 
-        <!-- main-Navbar  -->
-        <nav class=" navbar  navbar-expand-lg bg-tranparent navbar-light  py-3">
-            <div class="container ">
-                <a class="navbar-brand" href="#">
-                    <!-- remember to replace boiler plate logo -->
-                <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" 
-                width="30" height="24" class="d-inline-block align-text-top">
-                    Fashioncode</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#fashionCodeNav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end mx-5" id="fashionCodeNav">
-                    <ul class="nav sideNav">
-                      <li class="nav-item">
-                        <a class="nav-link text-light active" aria-current="page" href="#">Home</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link text-light" href="#">About</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link text-light" href="#">Products</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link text-light" href="#"  >Contact</a>
-                      </li>
-                    </ul>
-                  </div>
+
+ <!--NAV SECTION  -->
+    <div class="  sticky-top w-100 ">
+
+      <!-- TOP CTA -->
+      <div class=" top-message border-bottom border-light bg-dark ">
+        <p class="pt-3  text-light text-center fs-6">Do you want to give your brand a bespoken appearance ?
+          &nbsp;CONTACT US!
+        </p>
+      </div>
+      <!-- TOP MAIN NAV -->
+      <nav class="navbar navbar-expand-lg navbar-light p-0 d-md-block">
+        <div class="container-fluid main-nav-container p-md-1  ">
+         
+          <div class="main-nav collapse navbar-collapse d-md-flex justify-content-between  mx-md-5" id="fashioncodeNavMenu">
+            <div class="top-contact ms-5 mt-3">
+              <p class=" fs-5 text-uppercase" href="#"> 
+                <ion-icon name="call"></ion-icon>
+                +234-123-456-7890
+              </p>
             </div>
-          </nav>
-       
-          <img class="hero-image hero-image--1" src="/assets/images/14C.png" alt="engineer"> 
-          <img class="hero-image hero-image--2" src="/assets/images/15.png" alt="female-student"> 
-              <img class="top-50 start-50  w-50 position-absolute bg-text"src="assets/css/images/bg-text.png" alt="fashion">
-              <img class=" start-0  w-50 position-absolute  bottom-0 bg-text" src="assets/css/images/bg-text-2.png" alt="code">
-              <div class="navbar-cta text-left  mt-1">
-                <p>Get the best quality uniforms</p>
-                <h1>RIGHT HERE!</h1>
-                <button class="btn btn-primary rounded-pill px-5">contact us</button>
-              </div>
+           
+            <ul class="navbar-nav    mb-lg-0">
+              <li class="nav-item me-5">
+                <a class="nav-link text-uppercase fs-6 active"  href="about-us">about us</a>
+              </li>
+              <li class="nav-item me-5">
+                <a class="nav-link fs-6 text-uppercase" href="featured-product">featured products</a>
+              </li>
+              <li class="nav-item me-5">
+                <a class="nav-link fs-6 text-uppercase" href="customer-reviews">reviews</a>
+              </li>
+              <li class="nav-item bg-secondary rounded ">
+                <a class="nav-link fs-6 text-light text-uppercase " href="contact-us">contact</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        </header>
-        <section class="categories">
-          <div class=" container-fluid h-100 p-5">
-            <div class="row justify-content-center">
-              <div class="col  align-self-end bg-primary">
-                One of three columns
-              </div>
-              <div class="col align-self-center bg-danger">
-                One of three columns
-              </div>
-              <div class="col align-self-end bg-warning">
-                One of three columns
-              </div>
+      
+      <!-- TOP SUB-SECTION NAV -->
+      
+        <div class="container-fluid sub-section-nav shadow-lg">
+          <a class="navbar-brand fs-1 text-uppercase" href="#"> fashioncode</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#fashioncodeNavMenu" aria-controls="fashioncodeNavMenu" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="product-category collapse navbar-collapse justify-content-center" id="">
+            <ul class="navbar-nav   mb-2 mb-lg-0">
+              <li class="nav-item me-5">
+                <a class="nav-link text-uppercase active" aria-current="page" href="#">education</a>
+              </li>
+              <li class="nav-item me-5">
+                <a class="nav-link text-uppercase" href="#">security</a>
+              </li>
+              <li class="nav-item me-5">
+                <a class="nav-link text-uppercase" href="#">hospitality</a>
+              </li>
+
+              <li class="nav-item me-5">
+                <a class="nav-link text-uppercase" href="#">health</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+ <!-- carousel section -->
+  <section class="carousel-section  ">
+    <div class=" carousel-container ">
+      <!-- CAROUSEL SLIDER ONE -->
+      <div class=" carousel-items carousel-item_1 ">
+        <div class="carousel-cta  bg-light pt-5 ">
+          <p class="text-center fw-bold text-uppercase pt-5">school uniforms</p>
+          <p class="text-center ">fashioncode school uniforms designs</p>
+          <div class="cta-btn">
+            <button class="btn btn-warning text-light">view gallery</button>
+          </div>
+        </div>
+      </div>
+      <!-- CAROUSEL SLIDER TWO -->
+      <div class=" carousel-items carousel-item_1 ">
+        <div class="carousel-cta  bg-light pt-5 ">
+          <p class="text-center fw-bold text-uppercase pt-5">school uniforms</p>
+          <p class="text-center ">fashioncode school uniforms designs</p>
+          <div class="cta-btn">
+            <button class="btn btn-warning text-light">view gallery</button>
+          </div>
+        </div>
+      </div>
+      <!-- CAROUSEL SLIDER THREE -->
+      <div class=" carousel-items carousel-item_1 ">
+        <div class="carousel-cta  bg-light pt-5 ">
+          <p class="text-center fw-bold text-uppercase pt-5">school uniforms</p>
+          <p class="text-center ">fashioncode school uniforms designs</p>
+          <div class="cta-btn">
+            <button class="btn btn-warning text-light">view gallery</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-control d-flex ">
+      <div class="previous d-grid align-items-center">
+        <ion-icon name="arrow-back"></ion-icon>
+      </div>
+      <div class="forward d-grid align-items-center ">
+        <ion-icon name="arrow-forward"></ion-icon>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ABOUT SECTION -->
+  <section  class="about-section " id="about-us">
+<div class="container  pt-5 h-100 ">
+  <div class="row ">
+    <div class="col-md-6 col-sm-12   ">
+      <div class="d-flex justify-content-end">
+        <img src="/assets/images/about-us.jpg" alt="">
+      </div>
+      
+    </div>
+    <div class="col-md-6 col-sm-12  h-100 ">
+      <div class=" px-3 mt-lg-5 mt-sm-4">
+    <p>The most functional, stylish and finest corporate wear industry</p>
+    <p class="fs-6 mt-3">Thanks to our daily effort, enthusiasm and a great deal of perseverance,
+      we have become a reference company in the design and manufacturing of corporate clothing.</p>
+    <button class="btn btn-outline-secondary px-3">know about us</button>
+  </div>
+    </div>
+
+  </div>
+</div>
+  </section>
+  <section class="featured-products " id="featured-product">
+    <h3 class="pt-5">quality and durable designs</h3>
+    <div class="container mt-5 p-0">
+      <div class="row row-cols-1 row-cols-md-3  mt-3 pb-0 gx-0">
+        <!-- featured-products card one -->
+        <div class="imgd col-md-4 text-center  pb-0  px-5">
+          <div class="card border-0 m-auto" >
+            <figure >
+              <img src="/assets/images/school-uniform.png" alt="school-uniform"> 
+            </figure>
+          </div>
+         <p class="text-capitalize">school uniforms</p>
+           <div class="card-footer border-0 bg-transparent p-0">
+            <button class="btn btn-outline-secondary">view gallery</button>
+           </div>
+          
+        </div>
+        <!-- featured-product card two -->
+        <div class=" col-md-4  text-center px-5">
+          <div class="card border-0 m-auto " >
+            <figure>
+            <img src="/assets/images/hotel-porter-3.jpg"  alt="hospitality-uniform">
+            </figure>     
+          </div>
+          <p class="text-capitalize ">hospitality uniforms</p>
+          <div class="card-footer border-0 bg-transparent pt-0">
+            <button class="btn btn-outline-secondary">view gallery</button>
+           </div>
+          
+        </div>
+        <!-- featured-products card three -->
+        <div class="col-md-4 text-center px-5">
+          <div class="card border-0 m-auto" >
+            <figure>
+              <img src="/assets/images/industrial-uniforms-3.jpg" alt="industrial-uniforms">
+            </figure>
+          </div>
+          <p class="text-capitalize ">industrial uniforms</p>
+          <div class="card-footer border-0 bg-transparent pt-0">
+            <button class="btn btn-outline-secondary">view gallery</button>
+           </div>
+          
+        </div>
+      </div>
+      </div>
+  </section>
+  <!-- customer reviews -->
+  <section class="reviews" id="customer-reviews">
+    <div class="container reviews-container pt-3  ">
+      <h3>what our customers say</h3>
+      <!-- review one -->
+      <div class="review  text-center fs-4 fw-1">
+        <p>Lorem ipsum dolor sit amet 
+          consectetur adipisicing elit. Provident 
+          obcaecati eveniet dolorem? Non, quam quas adipisci ratione doloribus quis repellat?
+          Lorem ipsum dolor sit amet 
+          consectetur adipisicing elit. Provident 
+          obcaecati eveniet dolorem? Non, quam quas adipisci ratione doloribus quis repellat?
+        </p>
+        <div class="author-container d-flex align-items-center justify-content-center">
+            <img  src="/assets/images/shelly.png" alt="shelly-lawrence">
+          <p class="mt-3">Shelley Lawrence</p>
+        </div>
+      </div>
+      <!-- review two -->
+      <div class="review  text-center fs-4 fw-1">
+        <p>Lorem ipsum dolor sit amet 
+          consectetur adipisicing elit. Provident 
+          obcaecati eveniet dolorem? Non, quam quas adipisci ratione doloribus quis repellat?
+          Lorem ipsum dolor sit amet 
+          consectetur adipisicing elit. Provident 
+          obcaecati eveniet dolorem? Non, quam quas adipisci ratione doloribus quis repellat?
+        </p>
+        <div class="author-container d-flex align-items-center justify-content-center">
+          <img src="/assets/images/james.jpg" alt="james-smith">
+          <p>James Smith</p>
+        </div>
+      </div>
+      <!-- review three -->
+      <div class="review  text-center fs-4 fw-1">
+        <p>Lorem ipsum dolor sit amet 
+          consectetur adipisicing elit. Provident 
+          obcaecati eveniet dolorem? Non, quam quas adipisci ratione doloribus quis repellat?
+          Lorem ipsum dolor sit amet 
+          consectetur adipisicing elit. Provident 
+          obcaecati eveniet dolorem? Non, quam quas adipisci ratione doloribus quis repellat?
+        </p>
+        <div class="author-container d-flex align-items-center justify-content-center">
+         <img src="/assets/images/michael.jpg" alt="michael-douglas">
+          <p>Michael Douglas</p>
+        </div>
+      </div>
+      <!-- Scroll indicators -->
+      <div class="scroll-indicators d-flex justify-content-center">
+        <button class=" indicator btn btn-secondary rounded-circle p-1 me-1"></button>
+        <button class="indicator btn btn-secondary rounded-circle p-1 me-1"></button>
+        <button class="indicator btn btn-secondary rounded-circle p-1 me-1"></button>
+      </div>
+    </div>
+
+  </section>
+  <!-- contact us section -->
+  <section class="contact-section pb-5" id="contact-us">
+    <div class="container pt-5">
+      <div class="row">
+        <h3>contact us</h3>
+        <!-- contact address section -->
+        <div class="col-lg-6 col-sm-12  pt-5">
+          <!-- line one -->
+          <div class="d-flex">
+            <ion-icon name="location"></ion-icon>
+            <div class="ms-3">
+              <p class="m-0 fs-4 fw-6 text-capitalize">our office address</p>
+              <p class="fs-5 pt-0">234 main street winnipeg MB, A2B 5T7</p>
             </div>
           </div>
-        </section>
-      
+          <!-- line two -->
+          <div class="d-flex">
+            <ion-icon name="mail"></ion-icon>
+            <div class="ms-3">
+              <p class="m-0 fs-4 fw-6 text-capitalize">general enquiries</p>
+              <p class="fs-5 pt-0">contactus@fashioncode.com</p>
+            </div>
+          </div>
+          <!-- line three -->
+          <div class="d-flex">
+            <ion-icon name="call"></ion-icon>
+            <div class="ms-3">
+              <p class="m-0 fs-4 fw-6 text-capitalize">call us</p>
+              <p class="fs-5 pt-0">+234-123-456-7890</p>
+            </div>
+          </div>
+          <!-- line four -->
+          <div class="d-flex">
+            <ion-icon name="time"></ion-icon>
+            <div class="ms-3">
+              <p class="m-0 fs-4 fw-6 text-capitalize">business hours</p>
+              <p class="fs-5 pt-0">Mon - Sun : 09:00 AM - 09:00 PM</p>
+            </div>
+          </div>
+        </div>
+        <!-- contact address end -->
+        <div class="col-lg-6 col-sm-12 pt-5">
+          <form action="">
+            <div class="input-group input-group-lg mb-3">
+              <input type="text" class="form-control" placeholder="Your name" aria-label="name" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group input-group-lg mb-3">
+              <input type="text" class="form-control" placeholder="Your email" aria-label="email" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group input-group-lg  mb-3">
+              <input type="text" class="form-control" placeholder="Your contact number" aria-label="phone-number" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group input-group-lg">
+              <textarea class="form-control" placeholder="Your message"aria-label="message"></textarea>
+            </div>
+          </form>
+          <button class="btn btn-outline-secondary w-50 mt-3">submit</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- footer section -->
+  <section class="footer-section">
+    <div class="container-fluid">
+      <div class="row pt-5">
+        <!-- footer column one -->
+        <div class=" col-lg-2 col-sm-12 ">
+          <div class="footer-links">
+            <ul>
+              <li>
+                <a class="nav-link text-uppercase  "  href="about-us">about us</a>
+              </li>
+              <li>
+                <a class="nav-link text-uppercase "  href="featured-products">featured products</a>
+              </li>
+              <li>
+                <a class="nav-link text-uppercase "  href="reviews">reviews</a>
+              </li>
+              <li>
+                <a class="nav-link text-uppercase "  href="contact-us">contact us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- footer column two -->
+        <div class="col col-sm-6  col-lg-2 "> 
+          <div >
+            <ul>
+              <li>
+                <a class="nav-link text-uppercase  "  href="contact-us">education</a>
+              </li>
+              <li>
+                <a class="nav-link text-capitalize  footer-sub-links"  href="contact-us">elementary school </a>
+              </li>
+              <li>
+                <a class="nav-link text-capitalize  footer-sub-links"  href="contact-us">high school </a>
+              </li>
+              <li>
+                <a class="nav-link text-capitalize  footer-sub-links"  href="contact-us">graduation gowns </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- footer column three -->
+        <div class="col  col-sm-6 col-lg-2  "> 
+          <div >
+            <ul>
+              <li>
+                <a class="nav-link text-uppercase  "  href="contact-us">security</a>
+              </li>
+              <li>
+                <a class="nav-link text-capitalize  footer-sub-links"  href="contact-us">night guards </a>
+              </li>
+              <li>
+                <a class="nav-link text-capitalize  footer-sub-links"  href="contact-us">day guards</a>
+              </li>
+              <li>
+                <a class="nav-link text-capitalize  footer-sub-links"  href="contact-us">force uniforms</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- break columns into two equal rows on small screens -->
+        <div class="d-lg-none d-sm-block"></div> 
+        <!-- footer column four -->
+        <div class="col col-lg-2 col-sm-6  ">
+          <div >
+            <ul>
+              <li>
+                <a class="nav-link text-uppercase  "  href="contact-us">hospitality</a>
+              </li>
+              <li>
+                <a class="nav-link text-capitalize  footer-sub-links"  href="contact-us">receptionist uniforms </a>
+              </li>
+              <li>
+                <a class="nav-link text-capitalize  footer-sub-links"  href="contact-us">waiter uniforms</a>
+              </li>
+              <li>
+                <a class="nav-link text-capitalize footer-sub-links"  href="contact-us">doorman uniforms</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col  col-lg-2 col-sm-6  "> 
+          <div >
+            <ul>
+              <li>
+                <a class="nav-link text-uppercase  "  href="contact-us">health</a>
+              </li>
+              <li>
+                <a class="nav-link text-capitalize  footer-sub-links"  href="contact-us">nursing uniforms </a>
+              </li>
+              <li>
+                <a class="nav-link text-capitalize  footer-sub-links"  href="contact-us">lab coats</a>
+              </li>
+              <li>
+                <a class="nav-link text-capitalize footer-sub-links"  href="contact-us">lab overalls</a>
+              </li>
+            </ul>
+          </div>
+        </div>
         
-      
-                <!-- <section>
-                    <div class=' container-fluid position-relative  bg-primary carousel-holder'>
-                        <div class="position-absolute">
-                            <h1>hello world</h1>
-                            <h1>hello world</h1>
-                            <h1>hello world</h1>
-                            <h1>hello world</h1>
-                        </div>
-                </section> -->
-                
-                <!-- TEST END -->
-            <!-- Tab panes -->
-<!-- <div class="tab-content clearfix">
-    <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab"><p>home-tab</p></div>
-    <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab"><p>profile-tab</p></div>
-    <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab"><p>messages-tab</p></div>
-    <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab"><p>settings-tab</p></div>
-  </div> -->
- 
-  <hr class=" mt-5">
         
-        
-        <!-- Carousel Section end -->
+        <div class="col-lg-2 col-sm-12 ">
+          <div >
+            <p class=" text-uppercase mb-0 mt-2 social">follow us on:</p>
+            <div class="d-flex ">
+                <a class="nav-link p-0 text-capitalize  footer-sub-links rounded-circle "  href="#">
+                  <ion-icon name="logo-facebook" size='large'></ion-icon>
+                   </a>
+                <a class="nav-link p-0 text-capitalize  footer-sub-links"  href="#">
+                  <ion-icon name="logo-instagram" size="large"></ion-icon>
+                </a>
+                <a class="nav-link p-0 text-capitalize footer-sub-links"  href="#">
+                  <ion-icon name="logo-linkedin"size="large"></ion-icon>
+                </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="container-fluid w-100 credits">
+    <p>designed by Seyi Agboola. Copyright &copy; 
+      <script>document.write(new Date().getFullYear())</script> fashioncode All Rights Reserved</p>
+  </div>
 
 
 
@@ -142,14 +448,16 @@
 
 
 
+  <!-- IONICONS -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-    <!-- Bootstrap js bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" 
-    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  <!-- BOOTSTRAP JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <!-- CUSTOM SCRIPT -->
+  <script src="assets/js/script.js"></script>
 </body>
-</html>
 
-<!-- sample -->
-<!-- qa1
-  https://www.jdomni.com/ecommerce-themes/uniform-manufacturer-and-supplier-template
--->
+</html>

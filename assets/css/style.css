@@ -1,0 +1,314 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  box-sizing: border-box;
+
+  font-family: "Dosis", sans-serif;
+  font-size: 30px;
+  font-weight: 300;
+  background-color: #fff;
+}
+h3 {
+  margin-top: 2.5rem;
+  text-align: center;
+  font-size: 150%;
+  text-transform: capitalize;
+}
+h3::after {
+  border-bottom: 3px solid #fc97f9;
+  content: " ";
+  display: block;
+  margin: auto;
+  padding-top: 0.3em;
+  text-align: center;
+  width: 10%;
+}
+@media (max-width: 768px) {
+  h3 {
+    font-size: 100%;
+  }
+  p {
+    font-size: 100%;
+    font-weight: 300;
+  }
+}
+ion-icon {
+  color: #fc97f9;
+}
+
+/* -------------------------------- */
+/*        --- MAIN NAV ---         */
+/* -------------------------------- */
+.main-nav-container {
+  background-color: #fc97f9;
+}
+.main-nav-container ion-icon {
+  color: #000;
+}
+/* @media (max-width: 768px) {
+  .main-nav-container {
+    visibility: hidden !important;
+    background-color: tomato;
+    height: 0;
+  }
+} */
+
+.main-nav a {
+  /* font-size: 0.6em; */
+  font-weight: 500;
+}
+.sub-section-nav {
+  padding: 1em;
+  background-color: #fff;
+  transition: all 0.2s;
+}
+
+.product-category a {
+  color: #fc97f9;
+  border-bottom: none;
+  font-size: 0.6em;
+  font-weight: 800;
+  transition: border-bottom 0.4s;
+}
+.product-category a:hover {
+  border-bottom: 2px solid #fc97f9;
+}
+
+/* -------------------------------- */
+/*   --- CAROUSEL SECTION ---      */
+/* -------------------------------- */
+
+.carousel-section {
+  height: 100vh;
+  overflow: hidden;
+}
+.carousel-section ion-icon {
+  color: #000;
+}
+.carousel-container {
+  position: relative;
+}
+.carousel-items {
+  height: fit-content;
+  padding-top: 5%;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+}
+.carousel-item_1 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.208), rgba(0, 0, 0, 0.208)),
+    url("/assets/css/images/school-uniform.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.carousel-cta {
+  background-color: rgba(255, 255, 255, 0.247);
+  margin: auto;
+  opacity: 0.7;
+  width: 40%;
+  height: 12em;
+}
+.cta-btn {
+  display: flex;
+  justify-content: center;
+  opacity: 1;
+}
+.forward {
+  background-color: rgb(165, 161, 158) !important;
+  height: 2.5em;
+  width: 2em;
+  right: 0;
+  position: absolute;
+  top: 50%;
+}
+.previous {
+  background-color: rgb(165, 161, 158) !important;
+  height: 2.5em;
+  width: 2em;
+  left: 0;
+  position: absolute;
+  top: 50%;
+}
+@media only Screen and (max-width: 1024px) {
+  .carousel-items {
+    height: 100vh;
+    padding-top: 50%;
+  }
+  .carousel-cta {
+    background-color: rgba(255, 255, 255, 0.247);
+    margin: auto;
+    opacity: 0.7;
+    width: 80%;
+    height: 12em;
+    text-align: center;
+  }
+  .carousel-item_1,
+  .carousel-item_2,
+  .carousel-item_3 {
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+/* -------------------------------- */
+/*   --- ABOUT SECTION ---      */
+/* -------------------------------- */
+
+.about-gallery {
+  height: 25% !important;
+  /* padding-top: 2em; */
+}
+
+figure .factory-1 {
+  width: 50%;
+  height: max-content;
+  overflow: hidden;
+}
+figure .factory-2 {
+  width: 60%;
+  height: max-content;
+  overflow: hidden;
+}
+
+.about-section button:hover {
+  background-color: #fc97f9 !important;
+}
+@media (max-width: 768px) {
+  figure img {
+    width: 115%;
+    opacity: 0.9;
+    transform: scale(1.25);
+    transition: transform 0.7s;
+  }
+}
+/* -------------------------------- */
+/*   --- FEATURED PRODUCTS SECTION ---      */
+/* -------------------------------- */
+
+.featured-products {
+  background-color: #f4f4f4;
+}
+
+.featured-products .card {
+  width: 20rem;
+  height: 60%;
+  background-color: transparent;
+}
+.featured-products figure {
+  overflow: hidden;
+  background-color: #fc97f9;
+  width: 100%;
+}
+.featured-products img {
+  width: 100%;
+  opacity: 0.9;
+  transform: scale(1);
+  overflow: hidden;
+  transition: transform 0.7s;
+}
+figure img:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+@media (max-width: 768px) {
+  .featured-products .card {
+    width: 100%;
+    height: 60%;
+    background-color: transparent;
+  }
+}
+
+/* -------------------------------- */
+/*   --- REVIEWS SECTION ---      */
+/* -------------------------------- */
+.reviews-container {
+  padding-bottom: 0;
+  position: relative;
+  height: 70vh;
+  overflow: hidden;
+}
+.review {
+  position: absolute;
+}
+.author-container img {
+  border-radius: 50%;
+  width: 10%;
+  margin-right: 10px;
+}
+.reviews .scroll-indicators {
+  position: absolute;
+  bottom: 3%;
+  left: 50%;
+  right: 50%;
+}
+@media (max-width: 768px) {
+  .reviews-container {
+    padding-bottom: 0;
+    position: relative;
+    height: 70vh;
+    width: 100%;
+  }
+}
+/* -------------------------------- */
+/*   --- CONTACT-US SECTION ---      */
+/* -------------------------------- */
+.contact-section {
+  background-color: #f4f4f4;
+  padding: 10px;
+}
+.contact-section button:hover {
+  background-color: #fc97f9;
+}
+.contact-section .input-group,
+.form-control,
+.input-group-lg:focus {
+  box-shadow: none !important;
+}
+.contact-section .btn:focus {
+  box-shadow: none;
+}
+.contact-section ion-icon {
+  font-size: 1.5em;
+  padding-top: 5px;
+}
+/* -------------------------------- */
+/*   --- FOOTER SECTION ---      */
+/* -------------------------------- */
+/* .footer-section {
+  background-color: #fc97f9;
+} */
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-section a {
+  color: #000 !important;
+  font-size: 0.5em;
+  font-weight: 800;
+}
+.footer-sub-links {
+  font-weight: 300 !important;
+}
+.footer-section .social {
+  font-size: 0.5em;
+  font-weight: 800;
+}
+.credits {
+  background-color: #fc97f9;
+  font-size: 60%;
+  /* height: 5em; */
+  text-transform: capitalize;
+  text-align: center;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+@media (max-width: 768px) {
+  .credits {
+    font-size: 50%;
+  }
+}
