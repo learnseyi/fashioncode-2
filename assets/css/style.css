@@ -86,9 +86,9 @@ ion-icon {
   height: 100vh;
   overflow: hidden;
 }
-.carousel-section ion-icon {
+/* .carousel-section ion-icon {
   color: #000;
-}
+} */
 .carousel-container {
   position: relative;
 }
@@ -98,6 +98,7 @@ ion-icon {
   position: absolute;
   height: 100vh;
   width: 100vw;
+  transition: transform 2s;
 }
 .carousel-item_1 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.208), rgba(0, 0, 0, 0.208)),
@@ -117,21 +118,16 @@ ion-icon {
   justify-content: center;
   opacity: 1;
 }
-.forward {
-  background-color: rgb(165, 161, 158) !important;
-  height: 2.5em;
-  width: 2em;
-  right: 0;
+.carousel-control {
   position: absolute;
-  top: 50%;
+  width: 100%;
+  top: 15em;
+}
+.forward {
+  right: 0;
 }
 .previous {
-  background-color: rgb(165, 161, 158) !important;
-  height: 2.5em;
-  width: 2em;
   left: 0;
-  position: absolute;
-  top: 50%;
 }
 @media only Screen and (max-width: 1024px) {
   .carousel-items {
@@ -233,11 +229,24 @@ figure img:hover {
 }
 .review {
   position: absolute;
+  transition: transform 1.5s;
 }
 .author-container img {
   border-radius: 50%;
   width: 10%;
   margin-right: 10px;
+}
+.review-slider-control {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  /* bottom: 50%; */
+}
+.previousBtn {
+  left: 0;
+}
+.nextBtn {
+  right: 0;
 }
 .reviews .scroll-indicators {
   position: absolute;

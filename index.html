@@ -120,13 +120,13 @@
         </div>
       </div>
     </div>
-    <div class="carousel-control d-flex ">
-      <div class="previous d-grid align-items-center">
-        <ion-icon name="arrow-back"></ion-icon>
-      </div>
-      <div class="forward d-grid align-items-center ">
-        <ion-icon name="arrow-forward"></ion-icon>
-      </div>
+    <div class="carousel-control d-flex justify-content-between ">
+      <button class="btn btn-secondary rounded-circle previous ">
+        <ion-icon name="arrow-back" size="small"></ion-icon>
+      </button>
+      <button class=" btn btn-secondary forward rounded-circle  ">
+        <ion-icon name="arrow-forward" size="small"></ion-icon>
+      </button>
     </div>
   </section>
  
@@ -199,7 +199,7 @@
       </div>
   </section>
   <!-- customer reviews -->
-  <section class="reviews" id="customer-reviews">
+  <section class="reviews position-relative" id="customer-reviews">
     <div class="container reviews-container pt-3  ">
       <h3>what our customers say</h3>
       <!-- review one -->
@@ -244,6 +244,7 @@
           <p>Michael Douglas</p>
         </div>
       </div>
+ 
       <!-- Scroll indicators -->
       <div class="scroll-indicators d-flex justify-content-center">
         <button class=" indicator btn btn-secondary rounded-circle p-1 me-1"></button>
@@ -251,6 +252,15 @@
         <button class="indicator btn btn-secondary rounded-circle p-1 me-1"></button>
       </div>
     </div>
+         <!-- slider contols -->
+         <div class="review-slider-control d-flex justify-content-between ">
+          <button class="btn btn-secondary rounded-circle  previousBtn">
+            <ion-icon name="arrow-back" size="small"></ion-icon>
+          </button>
+          <button class=" btn btn-secondary rounded-circle  nextBtn">
+            <ion-icon name="arrow-forward" size="small"></ion-icon>
+          </button>
+        </div>
 
   </section>
   <!-- contact us section -->

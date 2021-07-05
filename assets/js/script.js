@@ -1,13 +1,15 @@
 // DOM SELECTORS
-const body = document.querySelector('body');
-const carousel = document.querySelector('.carousel-section');
+
 const stickyTop = document.querySelector('.sticky-top');
-const sections = document.querySelectorAll('section');
 const navList = document.querySelectorAll('.main-nav li a');
 const head = document.querySelector('.top-message');
 const slides = document.querySelectorAll('.carousel-items')
+const nextSlide = document.querySelector(' .forward')
+const prevSlide = document.querySelector('.previous');
 const subNav = document.querySelector('.sub-section-nav');
 const reviews = document.querySelectorAll('.review')
+const nextReviewBtn = document.querySelector('.nextBtn');
+const prevReviewBtn = document.querySelector('.previousBtn');
 const indicators= document.querySelectorAll('.indicator');
 const root = head.getBoundingClientRect().height;
 const offset = stickyTop.getBoundingClientRect().height - root;
@@ -25,34 +27,82 @@ const isAnimate = () => {
 
 document.addEventListener('scroll', isAnimate)
 
-// carousel animation
-slides.forEach((slide, i) => {
-    slide.style.transform = `translateX(${100 * i}%)`;
-})
-// scroll to function
-const getElement = (id) => {
-    let element = " ";
-    sections.forEach(section => {
-        if ("#" + section.getAttribute('id') === id)
-            element = section;
+// CAROUSEL ANIMATION
+let currentSlide = 0;
+const sliderNumber = slides.length;
+
+//  <-- update slide -->
+const showSlide = (sliderIndex)=>{
+    slides.forEach((slide, i) => {
+        slide.style.transform = `translateX(${100 * (i - sliderIndex)}%)`;
     })
-    return element;
+}
+// initialize slider to index zero onPageload
+showSlide(0) 
+// <--slider forward control -->
+const showNextSlide = ()=>{
+    if(currentSlide === sliderNumber - 1){
+        currentSlide = 0;
+    }else{
+        currentSlide++;
+    }
+showSlide(currentSlide);
+}
+// <-- slider previous control -->
+const showPrevSlide = ()=>{
+    if(currentSlide > 0 ){
+        currentSlide --;
+    }else{
+        currentSlide = 0;
+    }   
+    showSlide(currentSlide)
 }
 
-navList.forEach(nav => {
-    nav.addEventListener('click', (e) => {
-        e.preventDefault();
-        const element = document.getElementById(e.target.getAttribute('href'))
-        const elementPosition = element.offsetTop - offset
-        window.scrollTo({ top: elementPosition, behavior: 'smooth' });
-    })
-})
+//  <-- REVIEWS SECTION SLIDER ANIMATION -->
 // review slider
-reviews.forEach((review,i) =>{
-    review.style.transform =`translateX(${100 * i}%)`
-    console.log(review.children[1].innerHTML)
-
+const reviewNumber = reviews.length;
+// update slider
+const showReview = (reviewIndex)=>{
+    reviews.forEach((review,i) =>{
+        review.style.transform =`translateX(${100 * (i - reviewIndex)}%)`
+    })
+}
+showReview(0)
+// <-- next review control -->
+const showNextReview = ()=>{
+    if(currentSlide === reviewNumber - 1){
+        currentSlide = 0; 
+    }else{
+        currentSlide++;
+    }
+    showReview(currentSlide)
+}
+//  <-- previous review control -->
+const showPreviousReview = ()=>{
+    if(currentSlide > 0){
+        currentSlide--;
+    }else{
+        currentSlide = 0;
+    }
+    showReview(currentSlide)
+}
+// EVENT LISTENERS
+nextSlide.addEventListener('click',showNextSlide)
+prevSlide.addEventListener('click',showPrevSlide)
+nextReviewBtn.addEventListener('click',showNextReview);
+prevReviewBtn.addEventListener('click',showPreviousReview);
+// scroll to function
+const scrollToSection = (e)=>{
+    e.preventDefault();
+    const element = document.getElementById(e.target.getAttribute('href'))
+    const elementPosition = element.offsetTop - offset
+    window.scrollTo({ top: elementPosition, behavior: 'smooth' });
+}
+navList.forEach(nav => {
+    nav.addEventListener('click', scrollToSection)
 })
+
+
 
 
 // NAVBAR INTERSECTION OBSERVER
