@@ -39,6 +39,24 @@ const showSlide = (sliderIndex)=>{
 }
 // initialize slider to index zero onPageload
 showSlide(0) 
+//  <-- automatic slide show function -->
+// ??  <-- There is code duplication here -->
+const getSliderIndex = ()=>{
+    if(currentSlide === sliderNumber - 1){
+        currentSlide = 0;
+    }else{
+        currentSlide++;
+    }
+    return currentSlide;
+}
+const autoSlideShow = ()=>{
+    setInterval(()=>{
+        showSlide(getSliderIndex())
+        
+    }
+       ,3000 ) 
+}
+autoSlideShow()
 // <--slider forward control -->
 const showNextSlide = ()=>{
     if(currentSlide === sliderNumber - 1){
