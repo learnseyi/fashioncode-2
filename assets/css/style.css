@@ -6,9 +6,8 @@
 
 body {
   box-sizing: border-box;
-
   font-family: "Dosis", sans-serif;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 300;
   background-color: #fff;
 }
@@ -38,6 +37,11 @@ h3::after {
 }
 ion-icon {
   color: #fc97f9;
+}
+button,
+.btn,
+.btn-light:focus {
+  box-shadow: none !important;
 }
 
 /* -------------------------------- */
@@ -142,43 +146,18 @@ ion-icon {
     height: 12em;
     text-align: center;
   }
-  .carousel-item_1,
-  .carousel-item_2,
-  .carousel-item_3 {
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
 }
 
 /* -------------------------------- */
 /*   --- ABOUT SECTION ---      */
 /* -------------------------------- */
 
-.about-gallery {
-  height: 25% !important;
-  /* padding-top: 2em; */
-}
-
-figure .factory-1 {
-  width: 50%;
-  height: max-content;
-  overflow: hidden;
-}
-figure .factory-2 {
-  width: 60%;
-  height: max-content;
-  overflow: hidden;
-}
-
 .about-section button:hover {
   background-color: #fc97f9 !important;
 }
 @media (max-width: 768px) {
-  figure img {
-    width: 115%;
-    opacity: 0.9;
-    transform: scale(1.25);
-    transition: transform 0.7s;
+  .about-section img {
+    width: 90%;
   }
 }
 /* -------------------------------- */
@@ -217,6 +196,9 @@ figure img:hover {
     background-color: transparent;
   }
 }
+.btn-outline-secondary:hover {
+  background-color: #fc97f9 !important;
+}
 
 /* -------------------------------- */
 /*   --- REVIEWS SECTION ---      */
@@ -242,12 +224,7 @@ figure img:hover {
   top: 50%;
   /* bottom: 50%; */
 }
-.previousBtn {
-  left: 0;
-}
-.nextBtn {
-  right: 0;
-}
+
 .reviews .scroll-indicators {
   position: absolute;
   bottom: 3%;
