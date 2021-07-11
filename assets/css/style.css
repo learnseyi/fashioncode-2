@@ -53,13 +53,16 @@ button,
 .main-nav-container ion-icon {
   color: #000;
 }
-/* @media (max-width: 768px) {
-  .main-nav-container {
-    visibility: hidden !important;
-    background-color: tomato;
-    height: 0;
+@media (max-width: 768px) {
+  .main-nav {
+    position: absolute;
+    background-color: #fff;
+    right: 0px;
+    width: 50%;
+    padding: 10px;
+    transition: top 1s ease;
   }
-} */
+}
 
 .main-nav a {
   /* font-size: 0.6em; */
@@ -173,7 +176,7 @@ button,
   height: 60%;
   background-color: transparent;
 }
-.featured-products figure {
+.featured-products .image-holder {
   overflow: hidden;
   background-color: #fc97f9;
   width: 100%;
@@ -185,7 +188,7 @@ button,
   overflow: hidden;
   transition: transform 0.7s;
 }
-figure img:hover {
+.image-holder img:hover {
   transform: scale(1.1);
   opacity: 1;
 }
@@ -194,6 +197,15 @@ figure img:hover {
     width: 100%;
     height: 60%;
     background-color: transparent;
+  }
+
+  .featured-products .image-holder {
+    width: 100% !important;
+  }
+}
+@media only Screen and (max-width: 1024px) {
+  .featured-products .image-holder-mobile {
+    width: 130%;
   }
 }
 .btn-outline-secondary:hover {
@@ -206,7 +218,7 @@ figure img:hover {
 .reviews-container {
   padding-bottom: 0;
   position: relative;
-  height: 70vh;
+  height: 80vh;
   overflow: hidden;
 }
 .review {
@@ -235,10 +247,11 @@ figure img:hover {
   .reviews-container {
     padding-bottom: 0;
     position: relative;
-    height: 70vh;
+    height: 20em;
     width: 100%;
   }
 }
+
 /* -------------------------------- */
 /*   --- CONTACT-US SECTION ---      */
 /* -------------------------------- */
